@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family :Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+
+    /* The box-sizing: border-box; property in CSS is a way to specify 
+    how the total width and height of an element is calculated,  
+    particularly when borders and padding are added. */
+
+    /* Here we are adding styling for overall page */
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+/* 
+    A linear gradient in CSS is a graphical effect that creates a 
+    smooth transition of colors along a straight line. It allows 
+    you to create gradients that transition from one color to another, 
+    or from one color to transparent, in a linear direction 
+    
+    here we are styling for container class
+    */
+}
+
+.to-do{
+    width: 100%;
+    max-width: 546px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    background: #fff;
+    border-radius: 1rem;
+
+    /* Here we are adding styling for to-do class where all input, button are there */
+}
+
+.to-do h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+
+    /* Here we are styling heading 2  */ 
+} 
+
+.to-do h2 img {
+    width: 30px;
+    margin-left: 10px;
+
+    /* Here we are styling img  */
+}
+
+.input-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 1rem;
+    background-color: #313D5A;
+    margin-top: 10px;
+
+
+    /* Adding styling into input box where we enetr content to the todo list */
+
+}
+
+input{
+    flex: 1;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 1rem;
+    padding: 10px;
+
+    /* THis one is for input tag */
+}
+
+button{
+    background-color: #D36135;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+
+    /* Here this one is for button tag */
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('unchecked.png');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('checked.png');
+}
